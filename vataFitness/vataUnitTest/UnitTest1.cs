@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace vataUnitTest
+namespace vataFitnessUnitTest
 {
     [TestClass]
     public class UnitTest1

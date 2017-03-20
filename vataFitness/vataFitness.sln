@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "vataFitness", "vataFitness\vataFitness\vataFitness.shproj", "{77DA2673-E562-4305-B006-FBDFF5C8D3AF}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "vataFitnessBase", "vataFitness\vataFitness\vataFitnessBase.shproj", "{77DA2673-E562-4305-B006-FBDFF5C8D3AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vataFitness.Android", "vataFitness\vataFitness.Android\vataFitness.Android.csproj", "{EA2B355A-A601-442D-8E94-5D0467A3BBA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vataFitness.iOS", "vataFitness\vataFitness.iOS\vataFitness.iOS.csproj", "{E54B2AAE-AA86-4D76-B2D9-B5480A508710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vataUnitTest", "vataUnitTest\vataUnitTest.csproj", "{9AD8702F-27AE-463F-B5BE-5C5DBF23D753}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vataFitnessUnitTest", "vataUnitTest\vataFitnessUnitTest.csproj", "{9AD8702F-27AE-463F-B5BE-5C5DBF23D753}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
