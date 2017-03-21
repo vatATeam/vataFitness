@@ -3,7 +3,7 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>{77da2673-e562-4305-b006-fbdff5c8d3af}</SharedGUID>
+    <SharedGUID>{c08546f1-0a99-4162-b042-57ff0e601153}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>vataFitness</Import_RootNamespace>
