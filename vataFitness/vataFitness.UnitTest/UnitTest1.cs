@@ -9,6 +9,7 @@ namespace vataFitness.UnitTest
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.IsTrue(2 == 2);
         }
     }
 }
