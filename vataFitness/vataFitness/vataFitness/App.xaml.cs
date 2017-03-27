@@ -21,6 +21,21 @@ namespace vataFitness
             {
                 Children =
                 {
+                      new NavigationPage(new TrainingsPage())
+                    {
+                        Title = "Trainings",
+                        Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
+                    },
+                      new NavigationPage(new ComplexesPage())
+                    {
+                        Title = "Complexes",
+                        Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
+                    },
+                      new NavigationPage(new ExcercisesPage())
+                    {
+                        Title = "Exercises",
+                        Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
+                    },
                     new NavigationPage(new ItemsPage())
                     {
                         Title = "Browse",
