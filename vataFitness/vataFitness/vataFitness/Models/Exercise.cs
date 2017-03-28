@@ -9,7 +9,9 @@ namespace vataFitness.Models
         public string Title { get ; set; }
         public string Description { get; set; }
 
-        public Exercise() { }
-        
+        public Exercise(string title)
+        {
+            Title = title;
+        }
     }
 }
