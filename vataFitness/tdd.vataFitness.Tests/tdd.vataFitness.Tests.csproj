@@ -132,7 +132,6 @@
       <Name>vataFitness.UWP</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\vataFitness\vataFitness\vataFitness.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

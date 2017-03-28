@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using vataFitness.Services;
+﻿using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
+using vataFitness.Models;
 
 namespace tdd.vataFitness.Tests
 {
@@ -11,6 +10,18 @@ namespace tdd.vataFitness.Tests
         public void TestAppStartApplication()
         {
             Assert.IsTrue(true);
+        }
+
+        [TestMethod]
+        public void TestAddNewExerciseReturnNotNull()
+        {
+            var newExercise = new Exercise()
+            {
+                Title = "new exrcise title",
+                Description = "new exercise description"
+            };
+
+            Assert.IsNotNull(newExercise);
         }
     }
 }
