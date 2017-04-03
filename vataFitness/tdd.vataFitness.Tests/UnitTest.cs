@@ -70,6 +70,41 @@ namespace tdd.vataFitness.Tests
     }
 
     [TestClass]
+    public class WorkoutUnitTests
+    {
+        [TestMethod]
+        public void TestRealWorkoutImplemetsIWorkout()
+        {
+            Workout newWorkout = new RealWorkout()
+            {
+                Comment = "test comment",
+                Date = DateTime.Now
+            };
+            Assert.IsNotNull(newWorkout);
+        }
+
+        [TestMethod]
+        public void TestAddWorkComplexToWoroutReturnsTrue()
+        {
+            var newWorkout = new RealWorkout();
+            var newWorkComplex = new WorkComplex("test complex", WorkComplexTypes.AMRAP);
+            newWorkout.AddWorkComplex(newWorkComplex);
+            Assert.IsTrue(newWorkout.WorkComplexes.Contains(newWorkComplex));
+        }
+
+        [TestMethod]
+        public void TestRemoveWorkComplexFromWoroutReturnsTrue()
+        {
+            var newWorkout = new RealWorkout();
+            var newWorkComplex = new WorkComplex("test complex", WorkComplexTypes.AMRAP);
+            newWorkout.AddWorkComplex(newWorkComplex);
+
+            newWorkout.RemoveWorkComplex(newWorkComplex);
+            Assert.IsFalse(newWorkout.WorkComplexes.Contains(newWorkComplex));
+        }
+    }
+
+    [TestClass]
     public class CommonUnitTest
     {
         [TestMethod]
