@@ -8,9 +8,7 @@ namespace vataFitness.ViewModels
 {
 	public class BaseViewModel : ObservableObject
 	{
-	
-
-		bool isBusy = false;
+	    private bool isBusy = false;
 		public bool IsBusy
 		{
 			get { return isBusy; }
@@ -19,7 +17,7 @@ namespace vataFitness.ViewModels
 		/// <summary>
 		/// Private backing field to hold the title
 		/// </summary>
-		string title = string.Empty;
+		private string title = string.Empty;
 		/// <summary>
 		/// Public property to set and get the title of the item
 		/// </summary>
@@ -28,6 +26,13 @@ namespace vataFitness.ViewModels
 			get { return title; }
 			set { SetProperty(ref title, value); }
 		}
+
+        /// <summary>
+        /// Public property to set and get the title of the applcation
+        /// </summary>
+        public string AppTitle { get; set; }
+
+	    public string AppVersion => "1.0";
 	}
 }
 
