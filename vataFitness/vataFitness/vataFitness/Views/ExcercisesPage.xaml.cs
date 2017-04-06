@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using vataFitness.Models;
 using vataFitness.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,10 +21,18 @@ namespace vataFitness.Views
             BindingContext = _viewModel = new ExcercisesViewModel();
         }
 
-	    private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+	    private async void  OnItemSelected(object sender, SelectedItemChangedEventArgs args)
 	    {
-	        
-	    }
+            var item = args.SelectedItem as Item;
+            if (item == null)
+                return;
+
+            await Navigation.PushAsync(new ExerciseDetailPage());
+
+            // Manually deselect item
+           ExercisesListView.SelectedItem = null;
+
+        }
 
         protected override void OnAppearing()
         {
