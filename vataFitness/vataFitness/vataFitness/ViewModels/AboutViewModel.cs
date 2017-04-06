@@ -6,11 +6,15 @@ namespace vataFitness.ViewModels
 {
 	public class AboutViewModel : BaseViewModel
 	{
-		public AboutViewModel()
+	    
+	    public string AboutPageText { get; set; }
+
+	    public AboutViewModel()
 		{
 			Title = "About";
-
-			OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+		    AppTitle = "vataFitness";
+		    AboutPageText = "This app is written by vataTeam";
+			OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://github.com/vatATeam/vataFitness")));
 		}
 
 		/// <summary>

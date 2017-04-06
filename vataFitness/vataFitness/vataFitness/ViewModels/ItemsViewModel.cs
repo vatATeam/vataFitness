@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 
 using vataFitness.Helpers;
 using vataFitness.Models;
+using vataFitness.Services;
 using vataFitness.Views;
 
 using Xamarin.Forms;
@@ -14,8 +15,11 @@ namespace vataFitness.ViewModels
 	{
 		public ObservableRangeCollection<Item> Items { get; set; }
 		public Command LoadItemsCommand { get; set; }
-
-		public ItemsViewModel()
+        /// <summary>
+        /// Get the azure service instance
+        /// </summary>
+        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public ItemsViewModel()
 		{
 			Title = "Browse";
 			Items = new ObservableRangeCollection<Item>();

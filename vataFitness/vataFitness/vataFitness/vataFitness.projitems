@@ -28,6 +28,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Exercise.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Workout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\WorkComplex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\WorkSet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ExcercisesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>

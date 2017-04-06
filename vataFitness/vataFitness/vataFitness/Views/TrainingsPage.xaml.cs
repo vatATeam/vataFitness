@@ -14,6 +14,8 @@ namespace vataFitness.Views
 	{
 		public TrainingsPage ()
 		{
+		    Label header = new Label() {Text = "vataFitness"};
+            Content = header;
 			InitializeComponent ();
 		}
 	}

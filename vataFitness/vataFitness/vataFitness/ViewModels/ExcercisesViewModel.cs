@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using vataFitness.Helpers;
 using vataFitness.Models;
+using vataFitness.Services;
 using vataFitness.Views;
 using Xamarin.Forms;
 
@@ -13,18 +14,21 @@ namespace vataFitness.ViewModels
 {
     class ExcercisesViewModel : BaseViewModel
     {
-        public ObservableRangeCollection<Item> Items { get; set; }
+        public ObservableRangeCollection<Exercise> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
-
+        /// <summary>
+        /// Get the azure service instance
+        /// </summary>
+        public IDataStore<Exercise> DataStore => DependencyService.Get<IDataStore<Exercise>>();
         public ExcercisesViewModel()
         {
             Title = "Browse";
-            Items = new ObservableRangeCollection<Item>();
+            Items = new ObservableRangeCollection<Exercise>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<NewItemPage, Exercise>(this, "AddItem", async (obj, item) =>
             {
-                var _item = item as Item;
+                var _item = item;
                 Items.Add(_item);
                 await DataStore.AddItemAsync(_item);
             });
@@ -40,7 +44,7 @@ namespace vataFitness.ViewModels
             try
             {
                 Items.Clear();
-                var items = new ObservableCollection<Item>(new []{new Item(){Text = "Бёрпи", Description = "Тут написано как его делать"}, new Item(){Text = "Отжимание", Description = "Тут написано как делать оотжимания" },  });//await DataStore.GetItemsAsync(true);
+                var items = new ObservableCollection<Exercise>(new []{new Exercise("Бёрпи") { Description = "Тут написано как его делать"}, new Exercise("Отжимание") {Description = "Тут написано как делать оотжимания" },  });//await DataStore.GetItemsAsync(true);
                 Items.ReplaceRange(items);
             }
             catch (Exception ex)
