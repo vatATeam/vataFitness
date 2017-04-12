@@ -133,6 +133,11 @@
       <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SQLite.Net.Async">
+      <HintPath>C:\Users\Yury.Disnenko\.nuget\packages\SQLite.Net.Async-PCL\3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="..\vataFitness\vataFitness.projitems" Label="Shared" Condition="Exists('..\vataFitness\vataFitness.projitems')" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
