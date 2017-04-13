@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace vataFitness.ViewModels
 {
-	public class ItemsViewModel : BaseViewModel
+    public class ItemsViewModel : BaseViewModel
 	{
 		public ObservableRangeCollection<Item> Items { get; set; }
 		public Command LoadItemsCommand { get; set; }

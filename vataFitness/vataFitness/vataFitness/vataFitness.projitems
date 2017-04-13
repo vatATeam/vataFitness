@@ -5,9 +5,7 @@
     <HasSharedItems>true</HasSharedItems>
     <SharedGUID>{c08546f1-0a99-4162-b042-57ff0e601153}</SharedGUID>
   </PropertyGroup>
-  <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>vataFitness</Import_RootNamespace>
-  </PropertyGroup>
+  <PropertyGroup Label="Configuration" />
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml">
