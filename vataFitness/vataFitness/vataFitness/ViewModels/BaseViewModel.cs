@@ -1,12 +1,8 @@
 ﻿using vataFitness.Helpers;
-using vataFitness.Models;
-using vataFitness.Services;
-
-using Xamarin.Forms;
 
 namespace vataFitness.ViewModels
 {
-	public class BaseViewModel : ObservableObject
+    public class BaseViewModel : ObservableObject
 	{
 	    private bool isBusy = false;
 		public bool IsBusy
