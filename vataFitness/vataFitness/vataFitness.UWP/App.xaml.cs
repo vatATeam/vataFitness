@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.EntityFrameworkCore;
+using vataFitness.Models;
 
 namespace vataFitness.UWP
 {
@@ -30,6 +32,11 @@ namespace vataFitness.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            using (var db = new AppDbContext())
+            {
+                db.Database.Migrate();
+            }
         }
 
         /// <summary>

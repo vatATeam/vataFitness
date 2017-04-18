@@ -2,7 +2,9 @@
   "dependencies": {
     "Microsoft.EntityFrameworkCore": "1.1.1",
     "Microsoft.EntityFrameworkCore.Sqlite": "1.1.1",
+    "Microsoft.EntityFrameworkCore.Tools": "1.1.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+    "System.Data.SQLite": "1.0.105",
     "UnitsNet": "3.57.0",
     "Xamarin.Forms": "2.3.3.193"
   },
